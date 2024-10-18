@@ -25,7 +25,7 @@ $ docker run --name ***new-name*** -e POSTGRES_PASSWORD=password postgres
 ## Run in detached mode
 $ docker run -d _(for --detached)_ --name ***new-name*** -e POSTGRES_PASSWORD=password postgres
 
-# I. Docker volumes
+# II. Docker volumes
 
 ## 1. Mount a container in a volume
 $ docker run --name postgresql-dev -e POSTGRES_PASSWORD=password -v 
@@ -36,6 +36,12 @@ $ docker run --name postgresql-dev -e POSTGRES_PASSWORD=password -v
 ## 2. Create an anonymous volume
 - We let docker create a default path for us.
 - Example: $ docker run --name postgresql-dev -e POSTGRES_PASSWORD=password -v /var/lib/postgres/data postgres
+
+# III. Docker in real life
+
+## 1. Expose some ports
+$ docker run --name postgresql-dev `-p 5432(host port):5432(container port)` -d -e POSTGRES_PASSWORD=password -v 
+    /home/devjunior/Bureau/Projects/virtualisation/docker-demo/volumes/postgres/data:/var/lib/postgres/data postgres
 
 
 
