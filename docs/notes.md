@@ -82,7 +82,12 @@ Thus, there are three (03) to build and run a Spring Boot image
  -v /home/devjunior/Bureau/Projects/virtualisation/docker-demo/volumes/postgres/data:/var/lib/postgres/data 
  postgres
 
+# IV. Docker-compose file
+## 1. Lunch the docker-compose.yml
+$ docker compose up (-d)
 
+## 2. Stop the container lunched by docker compose up command
+$ docker compose down
 
 
 
